@@ -556,7 +556,8 @@
 				realWidth: 0, // only for when autoSizing is on
 				realHeight: 0, // only for when autoSizing is on
 				chosenFile: null,
-				useAutoSizing: false
+				useAutoSizing: false,
+				metadataApplied: false
 			};
 		},
 
@@ -1365,11 +1366,13 @@
 				}
 
 				// Initial data from metadata prop
-				if (this.metadata) {
+				if (this.metadata && !this.metadataApplied) {
+					this.metadataApplied = true;
 					this.imgData.startY = this.metadata.startY;
 					this.imgData.startX = this.metadata.startX;
 					this.scaleRatio = this.metadata.scale;
 					this.orientation = this.metadata.orientation;
+					this._setOrientation(this.orientation, true);
 				}
 			},
 			_naturalSize: function _naturalSize() {
