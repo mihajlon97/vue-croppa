@@ -1372,7 +1372,9 @@
 					this.imgData.startX = this.metadata.startX;
 					this.scaleRatio = this.metadata.scale;
 					this.orientation = this.metadata.orientation;
-					this._setOrientation(this.orientation, true);
+					if (this.orientation !== 1) {
+						this._setOrientation(this.orientation, true);
+					}
 				}
 			},
 			_naturalSize: function _naturalSize() {
