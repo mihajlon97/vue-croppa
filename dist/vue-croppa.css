@@ -138,7 +138,7 @@
   cursor: default;
 }
 .croppa-container.croppa--disabled {
-  cursor: not-allowed;
+  cursor: none;
 }
 .croppa-container.croppa--disabled:hover {
   opacity: 1;
