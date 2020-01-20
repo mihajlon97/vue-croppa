@@ -556,8 +556,7 @@
 				realWidth: 0, // only for when autoSizing is on
 				realHeight: 0, // only for when autoSizing is on
 				chosenFile: null,
-				useAutoSizing: false,
-				metadataApplied: false
+				useAutoSizing: false
 			};
 		},
 
@@ -1366,8 +1365,7 @@
 				}
 
 				// Initial data from metadata prop
-				if (this.metadata && !this.metadataApplied) {
-					this.metadataApplied = true;
+				if (this.metadata) {
 					this.imgData.startY = this.metadata.startY;
 					this.imgData.startX = this.metadata.startX;
 					this.scaleRatio = this.metadata.scale;
